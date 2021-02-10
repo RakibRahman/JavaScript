@@ -42,3 +42,27 @@ console.log(count);
 let userName = "Rakib";
 let welcome = `welcome Back,${userName}`;
 console.log(welcome);
+
+//String.indexOf()
+
+const shinra = "Know Pain. Accept Pain. Feel Pain";
+
+const word = "Pain";
+const indexOfFirst = shinra.indexOf(word);
+
+console.log(
+  `The Index of the first "${word}" from the beginning is ${indexOfFirst}`
+);
+console.log(
+  `The index of the 2nd "${word}" is ${shinra.indexOf(word, indexOfFirst + 1)}`
+);
+
+const strE = "Know Pain. Accept Pain. Feel Pain. Heal Pain";
+let num = 0;
+let position = strE.indexOf("Pain");
+
+while (position !== -1) {
+  num++;
+  position = strE.indexOf("Pain", position + 1);
+}
+console.log(num);
