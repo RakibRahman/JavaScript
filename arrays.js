@@ -58,5 +58,5 @@ const gameBoard = [
   ["o", "x", "o"],
 ];
 console.log(gameBoard);
-gameBoard[1][2] = "R";
+gameBoard[1][2] = "R"; //reassign value
 console.log(gameBoard);
