@@ -9,3 +9,12 @@ while (j >= 1) {
   console.log(j);
   j--;
 }
+
+//example
+let keyword = "pain";
+let guess = prompt("Enter the keyword!");
+
+while (guess !== keyword) {
+  guess = prompt("Enter the keyword!");
+}
+console.log("Corret ");
