@@ -1,5 +1,5 @@
 let rightNumber = Math.floor(Math.random() * 10 + 1);
-let guess = parseInt(prompt("Enter the keyword!"));
+let guess = parseInt(prompt("Enter the number between 1 to 10:"));
 
 while (guess !== rightNumber) {
   if (guess > rightNumber) {
