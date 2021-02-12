@@ -22,3 +22,4 @@ var user = {
 };
 console.log(user.info);
 console.log(Object.values(user));
+console.log(Object.keys(user));
