@@ -4,9 +4,9 @@
 
 ### Day-2: if else,String.indexOf(),arrays
 
-### Day-3: objects,for loop,while loop,for of loop,functions
+### Day-3: objects,for loop,while loop,for of loop,functions,math methods
 
-### Day-
+### Day-4: typeof,object and string methods,"REVISE:for,for of,function,array,object"
 
 ### Day-
 
