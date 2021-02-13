@@ -8,7 +8,7 @@
 
 ### Day-4: typeof,object and string methods, "REVISE:for,for of,function,array,object"
 
-### Day-5: do while,break & continue,map,filter,reduce,callback funtion,'Named Import and Export', Spread syntax,"REVISE:if-else,operators"
+### Day-5: do while,break & continue,map,filter,reduce,callback funtion,'Named Import and Export', Spread syntax, "REVISE:if-else,operators"
 
 ### Day-
 
