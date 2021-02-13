@@ -23,3 +23,12 @@ const numbers = [10, 10, 10, 3];
 
 const mathResult = mathNumbers(...numbers);
 console.log(mathResult);
+
+//add new item
+
+let arr3 = [1, 2, 4, 5];
+console.log(arr3);
+
+let newNumber = 96;
+arr3 = [...arr3, newNumber];
+console.log(arr3);
