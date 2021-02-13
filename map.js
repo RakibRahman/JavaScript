@@ -26,4 +26,10 @@ function getFullname(item) {
 }
 
 let nameList = persons.map(getFullname);
+
+// let nameList = persons.map(function getFullname(item) {
+//   let fullname = [item.firstname, item.lastname].join(" ");
+//   return fullname;
+// });
+
 console.log(nameList);
