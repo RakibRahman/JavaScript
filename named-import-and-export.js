@@ -1,7 +1,7 @@
 //import must be at top
 /*jshint esversion: 6 */
-import * as Math from "./math.js"; //to import all
-//import { export1 , export2 } from "module-name"; //to import the selected
+import * as Math from "./math.js"; //to import all values
+//import { export1 , export2 } from "module-name"; //to import the selected values
 console.log(Math.pi);
 console.log(Math.add(90, 10));
 console.log(Math.divide(90, 10));
