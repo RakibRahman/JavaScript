@@ -29,8 +29,13 @@ console.log("*************************");
 const person = (name) => {
   return {
     name,
+    age(x1, x2) {
+      return x1 + x2;
+      //The : and function are no longer necessary to define a method.
+    },
   };
 };
 const info = person("Rakib");
 console.log(info.name);
+console.log(info.age(40, 10));
 // console.log(person.("Rakib"));
