@@ -1,15 +1,15 @@
 # JavaScript
 
-### Day-1: numbers,variables,string,String Template Literals
+### Day-1: Numbers,Variables,String,String Template Literals
 
-### Day-2: if else,String.indexOf(),arrays
+### Day-2: If Else,String.indexOf(),Arrays
 
-### Day-3: objects,for loop,while loop,for of loop,functions,math methods
+### Day-3: Objects,For loop,While Loop,For Of Loop,Functions,Math Methods
 
-### Day-4: typeof,object and string methods, "REVISE:for,for of,function,array,object"
+### Day-4: typeof,Object and String methods, "REVISE:For,For Of,Function,Array,Object"
 
-### Day-5: do while,break & continue,map,filter,reduce,callback funtion,'Named Import and Export', Spread syntax, "REVISE:if-else,operators"
+### Day-5: Do While,Break & Continue,Map,Filter,Reduce,Callback Function,'Named Import and Export', Spread Syntax, "REVISE:If-Else,Operators"
 
-### Day-
+### Day-6: Arrow Functions,This Keyword
 
-### Day-
+### Day-7:Enhanced Object Literals,Array Destructuring,Object Destructuring, "REVISE: While Loop,Arrow Functions"
