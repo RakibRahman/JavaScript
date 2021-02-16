@@ -12,4 +12,14 @@
 
 ### Day-6: Arrow Functions,This Keyword
 
-### Day-7:Enhanced Object Literals,Array Destructuring,Object Destructuring, "REVISE: While Loop,Arrow Functions"
+### Day-7:Enhanced Object Literals,Array Destructuring,Object Destructuring, "REVISE: While Loop"
+
+### Day-8:Rest parameters,"Revise: Function,Arrow Function,forEach(),For Of,Spread Operator"
+
+### Day-9:
+
+### Day-10:
+
+### Day-11:
+
+### Day-12:
