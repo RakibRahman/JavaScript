@@ -16,7 +16,7 @@
 
 ### Day-8:Rest parameters,"Revise: Function,Arrow Function,forEach(),For Of,Spread Operator"
 
-### Day-9:
+### Day-9:Find,ForEach,Function default parameters,"REVISE:Object, Reduce,Filter,Map"
 
 ### Day-10:
 
