@@ -23,3 +23,19 @@ var user = {
 console.log(user.info);
 console.log(Object.values(user));
 console.log(Object.keys(user));
+
+console.log("---------------------");
+
+const userInfo = {
+  name: "Rakib",
+  age: 25,
+  gender: "Male",
+};
+console.log(userInfo);
+
+//Add / Delete Property
+
+userInfo.email = "md.rr.talukder@gmail.com";
+console.log(userInfo);
+delete userInfo.gender;
+console.log(userInfo);
