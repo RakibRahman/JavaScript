@@ -18,8 +18,8 @@
 
 ### Day-9:Find,ForEach,Function default parameters,"REVISE:Object, Reduce,Filter,Map"
 
-### Day-10:
+### Day-10: **Revise:** "_Conditions_,"For,Switch,While,Break Loops",Math Methods,Array & Methods,String
 
-### Day-11:
+### Day-11:Inheritance,Static Methods, "REVISE:Classes"
 
 ### Day-12:
