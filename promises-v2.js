@@ -29,3 +29,16 @@ asyncCall
   });
 
 console.log("---------------------");
+const promiseMe = new Promise((resolve, reject) => {});
+promise.then(success);
+promise.catch(error);
+
+function success() {
+  console.log("success");
+  //what to be done on success
+}
+
+function error() {
+  console.log("Error");
+  //what to be done error
+}
