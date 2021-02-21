@@ -1,4 +1,5 @@
 //Callback is function that gets executed on inside a function
+//! A callback function is a function passed to another function as an argument.
 
 function callbackExample(name, callback) {
   console.log(callback(name));
