@@ -26,6 +26,7 @@ function says(name, age) {
 }
 says("Rakib", 25);
 
+//? function with default parameter
 function says(name = "Pain", age = 23) {
   console.log(`${name} is ${age} years old `);
 }
