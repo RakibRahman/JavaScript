@@ -51,3 +51,8 @@ const total = members.reduce(
 );
 console.log(`Total Age: ${total}`);
 console.log(`Average Age: ${total / members.length}`);
+
+console.log("---------------------");
+const numbers = [100, 23, 23, 23, 23, 67, 45];
+const sum = numbers.reduce((acc, value) => (acc += value), 0);
+console.log(`Total is ${sum}`);
