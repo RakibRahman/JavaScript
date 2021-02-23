@@ -27,6 +27,9 @@ console.log(
 let random = Math.random() * 10 + 2;
 console.log("Random Number:", random);
 console.log("Floor Random Number:", Math.floor(random));
+const randoM = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+console.log(`Random number between 10 to 20: ${randoM(10, 20)}`);
 
 //Math.sqrt()
 // returns the square root of a numbe
