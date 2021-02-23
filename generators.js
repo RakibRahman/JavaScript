@@ -1,15 +1,15 @@
 //! a generator is a function that can be paused
-const Getnumbers = function* () {
+const getValues = function* () {
   yield 3;
   yield true;
   yield "Rakib";
   yield { name: "King" };
   return "Finished";
 };
-const numbersGen = Getnumbers();
+const valueGen = getValues();
 
-console.log(numbersGen.next().value);
-console.log(numbersGen.next());
-console.log(numbersGen.next());
-console.log(numbersGen.next());
-console.log(numbersGen.next().value);
+console.log(valueGen.next().value);
+console.log(valueGen.next());
+console.log(valueGen.next());
+console.log(valueGen.next());
+console.log(valueGen.next().value);
