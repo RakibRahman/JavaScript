@@ -14,4 +14,4 @@ const getRandomUsers = (n) => {
     });
   });
 };
-getRandomUsers(1000);
+getRandomUsers(10);
