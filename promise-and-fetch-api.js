@@ -1,3 +1,4 @@
+const { info } = require("console");
 const fetch = require("node-fetch");
 
 const getRandomUsers = (n) => {
@@ -14,4 +15,4 @@ const getRandomUsers = (n) => {
     });
   });
 };
-getRandomUsers(10);
+getRandomUsers(1);
