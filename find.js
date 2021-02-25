@@ -28,11 +28,12 @@ const foundMember = members.find((members) => members.name === "Rakib");
 console.log(foundMember);
 
 console.log("---------------------");
-
+//Find an object in an array by one of its properties
 const myArray = [
   { id: 1, name: "john" },
   { id: 2, name: "Ali" },
   { id: 3, name: "Mass" },
 ];
 console.log(myArray.find((element) => element.id === 2));
+console.log(myArray.find((element) => element.name === "Mass"));
 console.log(myArray.find((element) => element.id === 0));
