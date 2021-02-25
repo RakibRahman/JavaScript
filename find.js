@@ -1,5 +1,5 @@
 // Find
-// The find method returns the first item on the array that passes the condition on the provided function.
+// The find method returns the first item on the array that passes the condition on the provided function.Otherwise, it returns undefined.
 
 const members = [
   {
@@ -26,3 +26,13 @@ const members = [
 
 const foundMember = members.find((members) => members.name === "Rakib");
 console.log(foundMember);
+
+console.log("---------------------");
+
+const myArray = [
+  { id: 1, name: "john" },
+  { id: 2, name: "Ali" },
+  { id: 3, name: "Mass" },
+];
+console.log(myArray.find((element) => element.id === 2));
+console.log(myArray.find((element) => element.id === 0));
