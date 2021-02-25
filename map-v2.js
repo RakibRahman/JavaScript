@@ -17,3 +17,13 @@ console.log(years);
 
 let total = years.reduce((years, index) => years + index);
 console.log(total);
+
+const arr = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+
+console.log("----");
+
+const result = () => {
+  let z = arr.flat(Infinity);
+  return z.map((x) => x * x);
+};
+console.log(result());
