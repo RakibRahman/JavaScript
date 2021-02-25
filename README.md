@@ -22,4 +22,16 @@
 
 ### Day-11:Inheritance,Static Methods, "REVISE:Classes"
 
-### Day-12:
+### Day-12:Promise
+
+### Day-13:Set(),substr(),charAt(), "REVISE:Promise,Callback Function,Reduce"
+
+### Day-14: Promises & Fetch API,JSON.stringify()
+
+### Day-15:Generators,REVISE:"Fetch API"
+
+### Day-16:"Array Methods"
+
+### Day-17:Generators,"Array Methods"
+
+### Day-:
