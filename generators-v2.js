@@ -54,3 +54,24 @@ console.log(powerOf2.next().value);
 console.log(powerOf2.next().value);
 console.log(powerOf2.next().value);
 console.log(powerOf2.next().value);
+
+console.log("---------------------");
+
+const getNumbers = function* (numbers) {
+  for (let i = 0; i < numbers.length; i++) {
+    yield numbers[i];
+  }
+};
+const generateNumbers = getNumbers([1, 2, 3, 4, 5]);
+console.log(generateNumbers.next().value);
+
+const interval = setInterval(() => {
+  const next = generateNumbers.next();
+  if (next.done) {
+    console.log("Generator is Done");
+    clearInterval(interval);
+  } else {
+    const number = next.value;
+    console.log(number);
+  }
+}, 1000);
