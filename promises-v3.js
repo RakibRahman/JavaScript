@@ -1,4 +1,5 @@
 const { rejects } = require("assert");
+const { promises } = require("fs");
 const { resolve } = require("path");
 
 let array = [1, 2, 3, 4, 5];
@@ -20,3 +21,23 @@ promise
     console.log(error);
   });
 console.log("---------------------");
+
+function validate(username) {
+  let user = new Promise((resolve, reject) => {
+    if (username == "pain") {
+      setTimeout(() => {
+        resolve("This World Shall Know Pain");
+      }, 2000);
+    } else {
+      reject("Pain is gone");
+    }
+  });
+  return user;
+}
+validate("pains")
+  .then((shinra) => {
+    console.log(shinra);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
