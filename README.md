@@ -34,4 +34,18 @@
 
 ### Day-17:Generators,"Array Methods"
 
-### Day-:
+### Day-18:Revise: Classes
+
+### Day-19:Revise: Destructuring,Rest Parameter Syntax ,Spread Operator
+
+### Day-20:Async Await,setInterval(),Revise: Generators,Promises
+
+### Day-21:Map() Object,Set() Object,Revise: "Async and Await",Promise
+
+### Day-22:"DOM querySelector(), addEventListener() Method",Revise: "Async and Await",Promise
+
+### Day-23: Break
+
+### Day-24:
+
+### Day-25:
