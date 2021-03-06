@@ -16,3 +16,11 @@ console.log("---------------------");
 
 const sData = givenName.search("Rakib");
 console.log(sData);
+
+//! The Replace Method
+//! this method is case sensitive
+//! only replaces first match
+let str = "Mango,Banana,Jackfruit,Banana";
+let newStr = str.replace("Banana", "Berry");
+
+console.log(newStr);
