@@ -7,3 +7,9 @@ console.log(fruit.substr(0, 3));
 
 const name = "Rakibur";
 console.log(name.substr(4, 5));
+
+let str = "Mango,Banana,Jackfruit";
+let res = str.substr(0, 4);
+let res2 = str.substr(-9);
+console.log(res);
+console.log(res2);
