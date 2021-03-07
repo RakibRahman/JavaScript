@@ -29,3 +29,26 @@ var person = {
 };
 
 person.fullInfo();
+
+console.log("---------------------");
+
+function hi(arg) {
+  console.log(this + " hello to " + arg);
+}
+
+hi("Readers");
+
+hi.call("thisValue", "Readers");
+
+let obj = {
+  name: "Sebu Elias",
+  hiAgain: function (arg) {
+    console.log(this.name + " welcomes " + arg);
+  },
+};
+
+// So when we call
+obj.hiAgain("reader");
+
+// It is called like,
+obj.hiAgain.call(obj, "reader");
