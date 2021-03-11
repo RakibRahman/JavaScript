@@ -46,6 +46,24 @@
 
 ### Day-23: Break
 
-### Day-24:
+### Day-24:Async & Await,Promise
 
-### Day-25:
+### Day-25:try...catch statement,innerHTML
+
+### Day-26: String Methods
+
+### Day-27:this,Date objects
+
+### Day-28:Revise: if else,operators,ternary operator,while loop,for loop,break,Postfix,Prefix
+
+### Day-29:do while loop,for loop,array
+
+### Day-30:for in loop,array methods
+
+### Day-31:
+
+### Day-32:
+
+### Day-33:
+
+### Day-34:
