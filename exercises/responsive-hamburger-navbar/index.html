@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css"
+      integrity="sha512-wl80ucxCRpLkfaCnbM88y4AxnutbGk327762eM9E/rRTvY/ZGAHWMZrYUq66VQBYMIYDFpDdJAOGSLyIPHZ2IQ=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header px-10">
+      <nav class="navbar flex justify-between items-center">
+        <a href="#" class="nav-logo text-4xl text-indigo-600">RRT</a>
+        <ul
+          class="nav-menu fixed flex flex-col gap-4 ml-auto text-2xl text-yellow-400 text-center -left-full w-full top-10 bg-black lg:relative lg:top-0 lg:left-0 lg:flex-row lg:justify-end lg:bg-white"
+        >
+          <li class="nav-item">
+            <a href="#" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">Contact</a>
+          </li>
+        </ul>
+        <div class="hamburger space-y-1 lg:hidden block">
+          <span
+            class="bar w-10 h-1 block bg-black transition-transform duration-200 ease-in-out"
+          ></span>
+          <span
+            class="bar w-10 h-1 block bg-black transition-transform duration-200 ease-in-out"
+          ></span>
+          <span
+            class="bar w-10 h-1 block bg-black transition-transform duration-200 ease-in-out"
+          ></span>
+        </div>
+      </nav>
+    </header>
+    <script src="app.js"></script>
+  </body>
+</html>
