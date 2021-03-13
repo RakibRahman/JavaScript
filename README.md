@@ -60,9 +60,9 @@
 
 ### Day-30:for in loop,array methods
 
-### Day-31:
+### Day-31: BREAK
 
-### Day-32:
+### Day-32:array,string methods
 
 ### Day-33:
 
