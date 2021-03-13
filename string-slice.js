@@ -25,7 +25,7 @@ if (firstChar !== -1) {
   quote =
     quote.slice(0, firstChar) +
     "The Third World War" +
-    quote.slice(firstChar + 13); //! 13 is the length of the "World War III"
+    quote.slice(firstChar + 13); //! 13 is the length of the "World War III"/indexOf()
 }
 
 console.log(quote);
