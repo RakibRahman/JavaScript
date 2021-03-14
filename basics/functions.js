@@ -1,7 +1,8 @@
-function getName(name) {
+function getName(name = "Unknown") {
   console.log("Hello " + name);
 }
 getName("Rakib");
+getName();
 
 function isEven(number) {
   if (number % 2 == 0) {
