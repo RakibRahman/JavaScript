@@ -19,3 +19,12 @@ films.forEach((flim) =>
     } & has a ${"rating".toUpperCase()} of ${flim.rating}`
   )
 );
+
+const languages = ["C", "C++", "Rust", "Python", "JavaScript"];
+const copy = [];
+
+languages.forEach((items) => {
+  copy.push(items);
+});
+
+console.log(copy);
