@@ -13,3 +13,6 @@ console.log(Object.values(info));
 info.forEach((intel) => console.log(intel));
 
 console.log(Object.keys(person));
+
+const languages = ["C", "C++", "Java", "Python", "JavaScript"];
+console.log(Object.values(languages));
