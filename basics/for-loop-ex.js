@@ -44,3 +44,14 @@ for (let i = 0; i < firstNames.length; i++) {
     console.log(fullNames);
   }
 }
+
+console.log("---------------------");
+//! a 2D/3D array.
+let matrix = [];
+for (let r = 0; r < 3; r++) {
+  matrix[r] = [];
+  for (let q = 0; q < 3; q++) {
+    matrix[r][q] = [r, q];
+  }
+}
+console.log(matrix);
