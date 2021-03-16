@@ -64,6 +64,16 @@
 
 ### Day-32:array,string methods
 
-### Day-33:
+### Day-33:string methods
 
-### Day-34:
+### Day-34:array methods,functions
+
+### Day-35:String Methods,Objects Methods,Async functions,Promises,parseFloat(),parseInt(),toString(),toFixed()
+
+### Day-36:Classes,Constructors,Date and Time
+
+### Day-37:
+
+### Day-38:
+
+### Day-39:
