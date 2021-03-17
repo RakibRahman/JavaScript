@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ForEach</title>
+  </head>
+  <body>
+    <div class="flex justify-center mt-10 text-4xl">
+      <p id="list"></p>
+    </div>
+    <button id="btn">Show Menus</button>
+    <script>
+      let data = "";
+      const items = [
+        { id: "🍔", name: "Super Burger", price: 150 },
+        { id: "🥩", name: "Super Meat", price: 450 },
+        { id: "🍜", name: "Super Noodles", price: 180 },
+      ];
+      const list = document.querySelector("#list");
+      const btn = document.querySelector("#btn");
+      items.forEach((item) => {
+        data += `
+        <li>
+            ${item.id} - ${item.name} - ${(item.price / 100).toFixed(2)}$
+        </li>
+        `;
+      });
+
+      const showMenu = () => (list.innerHTML = data);
+      btn.addEventListener("click", showMenu);
+    </script>
+  </body>
+</html>
