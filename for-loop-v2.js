@@ -9,3 +9,15 @@ for (var i = 0; i < persons.length; i++) {
   console.log(persons[i].age);
   console.log("---------------");
 }
+
+const items = [
+  { id: "🍔", name: "Super Burger", price: 150 },
+  { id: "🥩", name: "Super Meat", price: 450 },
+  { id: "🍜", name: "Super Noodles", price: 180 },
+];
+const itemLength = items.length;
+console.log(itemLength);
+for (let i = 0; i < items.length; i++) {
+  const item = items[i];
+  console.log(`${item.id} - ${item.name} - ${(item.price / 100).toFixed(2)}$`);
+}
