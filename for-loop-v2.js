@@ -31,3 +31,14 @@ for (let i = 0; i < items.length; i++) {
   }
 }
 console.log(expensiveItems);
+
+console.log("---------------------");
+
+let reduced;
+let prev = 0; //initialValue
+for (let i = 0; i < items.length; i++) {
+  const next = items[i];
+  prev = prev + next.price;
+}
+reduced = prev;
+console.log(reduced);
