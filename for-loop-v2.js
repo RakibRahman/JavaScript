@@ -21,3 +21,13 @@ for (let i = 0; i < items.length; i++) {
   const item = items[i];
   console.log(`${item.id} - ${item.name} - ${(item.price / 100).toFixed(2)}$`);
 }
+console.log("---------------------");
+
+const expensiveItems = [];
+for (let i = 0; i < items.length; i++) {
+  const item = items[i];
+  if (item.price > 160) {
+    expensiveItems.push(item);
+  }
+}
+console.log(expensiveItems);
