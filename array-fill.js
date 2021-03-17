@@ -12,6 +12,6 @@ let arr2 = [1, 2, 3, 4, 5];
 let arraySize = arr2.length;
 let filledArray = new Array(arraySize)
   .fill(null)
-  .map(() => ({ hello: "goodbye" }));
+  .map(() => ({ hello: "goodbye", king: "killer" }));
 
 console.log(filledArray);
