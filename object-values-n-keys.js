@@ -26,6 +26,7 @@ const hasKeys = !!Object.keys(item);
 console.log(hasKeys);
 
 const getKeyLength = (x) => Object.keys(x).length;
+// const getKeyLength = (x) => Object.values(x).length;
 
 const keyLength = getKeyLength(item);
 const keyBool = !!keyLength;
