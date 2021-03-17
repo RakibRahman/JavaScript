@@ -14,8 +14,15 @@
   </head>
   <body>
     <div class="flex flex-col items-center justify-center mt-10 text-4xl">
-      <p id="list"></p>
-      <button class="mt-2 bg-green-200" id="btn">Show Menus</button>
+      <p id="list" class="space-y-2"></p>
+      <button
+        class="mt-2 bg-green-200"
+        id="btn"
+        ondblclick="location.reload();"
+        title="double click to reload"
+      >
+        Show Menus
+      </button>
     </div>
 
     <script>
