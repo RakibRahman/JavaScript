@@ -16,3 +16,18 @@ console.log(Object.keys(person));
 
 const languages = ["C", "C++", "Java", "Python", "JavaScript"];
 console.log(Object.values(languages));
+
+console.log("---------------------");
+//check if a object has keys
+const item = { id: "🥽", name: "Goggles", price: 1499 };
+
+const hasKeys = !!Object.keys(item);
+//? with a double-bang !! we can convert the length of the returned Array to a Boolean, ensuring we get a true or false reading.its not necessary but code practice.
+console.log(hasKeys);
+
+const getKeyLength = (x) => Object.keys(x).length;
+
+const keyLength = getKeyLength(item);
+const keyBool = !!keyLength;
+//const up = keyBool.toString().toUpperCase();
+console.log(`Keys Available: ${keyBool} - Total Keys: ${keyLength}`);
