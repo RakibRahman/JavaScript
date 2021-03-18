@@ -9,7 +9,7 @@ for (var i = 0; i < persons.length; i++) {
   console.log(persons[i].age);
   console.log("---------------");
 }
-
+//! forEach()
 const items = [
   { id: "🍔", name: "Super Burger", price: 150 },
   { id: "🥩", name: "Super Meat", price: 450 },
@@ -23,6 +23,23 @@ for (let i = 0; i < items.length; i++) {
 }
 console.log("---------------------");
 
+//! map()
+const halfPrice = [];
+for (let i = 0; i < items.length; i++) {
+  const item = items[i];
+  if (item.id === "🍜") {
+    halfPrice.push({
+      ...item,
+      price: item.price / 2,
+    });
+  } else {
+    halfPrice.push(item); //? .push method instead of return ,to add each item to new array
+  }
+}
+console.log(halfPrice);
+console.log("---------------------");
+
+//!filter()
 const expensiveItems = [];
 for (let i = 0; i < items.length; i++) {
   const item = items[i];
@@ -34,6 +51,7 @@ console.log(expensiveItems);
 
 console.log("---------------------");
 
+//! reduce()
 let reduced;
 let prev = 0; //initialValue
 for (let i = 0; i < items.length; i++) {
