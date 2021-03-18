@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <h1>Map Method</h1>
+    <div id="results"></div>
+    <script>
+      const results = document.querySelector("#results");
+      const items = [
+        { id: "🍔", name: "Super Burger", price: 150 },
+        { id: "🥩", name: "Super Meat", price: 450 },
+        { id: "🍜", name: "Super Noodles", price: 180 },
+      ];
+      const names = items.map(
+        (item) => `<li>${item.name} - ${item.price} Tk</li>`
+      );
+      results.innerHTML = names;
+    </script>
+  </body>
+</html>
