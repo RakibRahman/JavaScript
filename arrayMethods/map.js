@@ -16,3 +16,13 @@ const halfPrice = items.map((item) => {
   return item;
 });
 console.log(halfPrice);
+
+console.log("---------------------");
+
+const newItems = items.map((item) => {
+  return {
+    foodName: item.name.toUpperCase(),
+    foodPrice: item.price * 10,
+  };
+});
+console.log(newItems);
