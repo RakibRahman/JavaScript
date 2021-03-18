@@ -60,3 +60,51 @@ for (let i = 0; i < items.length; i++) {
 }
 reduced = prev;
 console.log(reduced);
+
+console.log("---------------------");
+
+//! some()
+const newItems = [
+  { id: "🍔", name: "Super Burger", price: 399, promo: false },
+  { id: "🥩", name: "Super Meat", price: 199, promo: false },
+  { id: "🍜", name: "Super Noodles", price: 299, promo: true },
+];
+
+let isInPromo = false;
+for (let n = 0; n > newItems.length; n++) {
+  const element = newItems[n];
+  if (element.promo) {
+    isInPromo = true;
+    break;
+  }
+}
+console.log(isInPromo);
+
+console.log("---------------------");
+
+//! every()
+
+let promoAvailable = true;
+for (let n = 0; n > newItems.length; n++) {
+  const item = newItems[n];
+  if (!item.promo) {
+    promoAvailable = false;
+    break;
+  }
+}
+console.log(promoAvailable);
+
+console.log("---------------------");
+
+//! find()
+
+let found;
+
+for (let i = 0; i < newItems.length; i++) {
+  const item = newItems[i];
+  if (item.id === "🥩") {
+    found = item;
+    break;
+  }
+}
+console.log(found.name, "is love!");
