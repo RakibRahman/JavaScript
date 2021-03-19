@@ -20,3 +20,38 @@ console.log(
     .map((item) => item.name)
     .join(", ")}`
 );
+console.log("---------------------");
+const menu = [
+  {
+    name: "pancakes",
+    category: "breakfast",
+    price: 150,
+  },
+  {
+    name: "steak",
+    category: "lunch",
+    price: 650,
+  },
+  {
+    name: "eggs",
+    category: "breakfast",
+    price: 250,
+  },
+  {
+    name: "rice",
+    category: "dinner",
+    price: 120,
+  },
+  { name: "pasta", category: "dinner", price: 180 },
+  { name: "bacon", category: "lunch", price: 400 },
+];
+const under200 = menu.filter((item) => {
+  if (item.price <= 200) {
+    return item;
+  }
+  //? return item.price <200;
+});
+console.log(under200);
+
+const categories = menu.filter((item) => item.category === "lunch");
+console.log(categories);
