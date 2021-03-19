@@ -15,3 +15,32 @@ console.log(
     favorite.price / 2
   ).toFixed(2)} Tk`
 );
+console.log("---------------------");
+
+const menu = [
+  {
+    name: "pancakes",
+    category: "breakfast",
+    price: 150,
+  },
+  {
+    name: "steak",
+    category: "lunch",
+    price: 650,
+  },
+  {
+    name: "eggs",
+    category: "breakfast",
+    price: 250,
+  },
+  {
+    name: "rice",
+    category: "dinner",
+    price: 120,
+  },
+  { name: "pasta", category: "dinner", price: 180 },
+  { name: "bacon", category: "lunch", price: 400 },
+];
+
+const rice = menu.find((item) => item.name === "rice");
+console.log(rice);
