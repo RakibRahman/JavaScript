@@ -29,3 +29,38 @@ console.log(totalPrice, "Tk");
 //? another way
 const total = items.reduce((acc, val) => acc + val.price, 0);
 console.log(total);
+
+console.log("---------------------");
+
+const menu = [
+  {
+    name: "pancakes",
+    category: "breakfast",
+    price: 150,
+  },
+  {
+    name: "steak",
+    category: "lunch",
+    price: 650,
+  },
+  {
+    name: "eggs",
+    category: "breakfast",
+    price: 250,
+  },
+  {
+    name: "rice",
+    category: "dinner",
+    price: 120,
+  },
+  { name: "pasta", category: "dinner", price: 180 },
+  { name: "bacon", category: "lunch", price: 400 },
+];
+
+const allItems = menu.reduce((total, items) => {
+  console.log(total);
+  console.log(items.price);
+  total += items.price;
+  return total;
+}, 0);
+console.log(allItems);
