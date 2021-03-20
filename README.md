@@ -74,6 +74,20 @@
 
 ### Day-37:Array Methods,Object Methods,DOM
 
-### Day-38:
+### Day-38:Array Methods,DOM
 
-### Day-39:
+### Day-39:Objects,Array Methods
+
+### Day-40:Objects,Array Methods,Destructuring,Functions
+
+### Day-41:Rest Operator,Spread Operator, Async Await
+
+### Day-42:
+
+### Day-43:
+
+### Day-44:
+
+### Day-45:
+
+### Day-46:
