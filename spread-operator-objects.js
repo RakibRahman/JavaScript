@@ -9,3 +9,10 @@ const name = {
 };
 const person = { ...address, ...name };
 console.log(person);
+
+console.log("---------------------");
+
+const id = { name: "labib", job: "Developer" };
+const newPerson = { ...id, city: "sylhet" };
+console.log(id);
+console.log(newPerson);
