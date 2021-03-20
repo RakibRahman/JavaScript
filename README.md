@@ -80,7 +80,7 @@
 
 ### Day-40:Objects,Array Methods,Destructuring,Functions
 
-### Day-41:Rest Operator,Spread Operator, Async Await
+### Day-41:Rest Operator,Spread Operator, Async Await,Promises
 
 ### Day-42:
 
