@@ -1,3 +1,5 @@
+//! A promise is a value that may produce a value in the future. 
+
 const movies = [
   {
     title: `The Dark Knight`,
@@ -16,18 +18,37 @@ const movieNew = {
   title: `The Shining`,
   body: `Jack and his family move into an isolated hotel with a violent past. Living in isolation, Jack begins to lose his sanity, which affects his family members.`,
 };
+const movieNew2 = {
+  title: `Tom and Jerry`,
+  body: `A legendary rivalry reemerges when Jerry moves into New York City's finest hotel on the eve of the wedding of the century, forcing the desperate event planner to hire Tom to get rid of him`,
+};
+const movieNew3 = {
+  title: `Godzilla vs. Kong`,
+  body: `Fearsome monsters Godzilla and King Kong square off in an epic battle for the ages, while humanity looks to wipe out both of the creatures and take back the planet once and for all.`,
+};
 const getMovies = () => {
     setTimeout(() => {
         movies.forEach((movie, index) => {
-            console.log(`${index}: ${movie.title}`)
+            console.log(`${index+1}: ${movie.title}`)
         })
     }, 1000);
 };
-const addMovies = (movie) => {
-    
+const addMovies = (...movie) => {
+  return new Promise((resolve, reject) => {
+
+    setTimeout(() => {
+      resolve(`${movies.push(...movie)}`);
+    }, 1500)
+
+   setTimeout(() => {
+     reject("No data found from the server,an error happened");
+   }, 2400);
+
+  });
     }
 
 
 
-addMovies(movieNew);
-getMovies();
+addMovies(movieNew, movieNew2, movieNew3).then(getMovies).catch((error) => {
+  console.log("Data Error");
+})
