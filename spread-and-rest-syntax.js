@@ -1,4 +1,8 @@
 //? Spread syntax can be used when all elements from an object or array need to be included in a list of some kind.
+//! Split into single items
+const country = "Bangladesh";
+const letters = [...country];
+console.log(letters);
 
 const sum = (x, y, z) => x + y + z;
 
@@ -21,4 +25,4 @@ function testRest(arg1, arg2, ...otherArgs) {
 
 testRest(1, 2, 3, 4, 5);
 
-//Spread syntax can appear inside a function or when calling the function. Rest parameter syntax is limited to the function signature itself.
+//? Spread syntax can appear inside a function or when calling the function. Rest parameter syntax is limited to the function signature itself.
