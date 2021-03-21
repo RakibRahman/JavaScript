@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerHTML</title>
+    <style>
+      body {
+        display: grid;
+        place-items: center;
+      }
+      button {
+        padding: 5px 10px;
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="title">Quote of The Day</p>
+    <!-- <p class="para"></p> -->
+    <h1 id="quote">Best Anime Quote</h1>
+    <p class="author"></p>
+    <button onclick="btnClick()">Click</button>
+
+    <script>
+      const quote = document.getElementById("quote");
+      //   const para = document.getElementsByClassName("para");
+      const author = document.querySelector(".author");
+
+      const btnClick = () => {
+        quote.innerHTML = "This World Shall Know Pain";
+        quote.style.color = "red";
+        author.innerHTML = "Shinra Tensei";
+        const info = document.querySelector(".title").innerHTML;
+        setTimeout(() => {
+          alert(`${info} By Nagato`);
+        }, 1000);
+      };
+    </script>
+  </body>
+</html>
