@@ -82,7 +82,7 @@
 
 ### Day-41:Rest Operator,Spread Operator, Async Await,Promises
 
-### Day-42:
+### Day-42:Window,DOM,BOM
 
 ### Day-43:
 
@@ -90,4 +90,10 @@
 
 ### Day-45:
 
-### Day-46:
+### Day-47:
+
+### Day-48:
+
+### Day-49:
+
+### Day-50:
