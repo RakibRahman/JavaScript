@@ -1,4 +1,4 @@
-//! A promise is a value that may produce a value in the future. 
+//! A promise is a value that may produce a value in the future.
 
 const movies = [
   {
@@ -27,28 +27,26 @@ const movieNew3 = {
   body: `Fearsome monsters Godzilla and King Kong square off in an epic battle for the ages, while humanity looks to wipe out both of the creatures and take back the planet once and for all.`,
 };
 const getMovies = () => {
-    setTimeout(() => {
-        movies.forEach((movie, index) => {
-            console.log(`${index+1}: ${movie.title}`)
-        })
-    }, 1000);
+  setTimeout(() => {
+    movies.forEach((movie, index) => {
+      console.log(`${index + 1}: ${movie.title}`);
+    });
+  }, 1000);
 };
 const addMovies = (...movie) => {
   return new Promise((resolve, reject) => {
-
     setTimeout(() => {
       resolve(`${movies.push(...movie)}`);
-    }, 1500)
+    }, 1500);
 
-   setTimeout(() => {
-     reject("No data found from the server,an error happened");
-   }, 2400);
-
+    setTimeout(() => {
+      reject("No data found from the server,an error happened");
+    }, 2400);
   });
-    }
+};
 
-
-
-addMovies(movieNew, movieNew2, movieNew3).then(getMovies).catch((error) => {
-  console.log("Data Error");
-})
+addMovies(movieNew, movieNew2, movieNew3)
+  .then(getMovies)
+  .catch((error) => {
+    console.log("Data Error");
+  });
