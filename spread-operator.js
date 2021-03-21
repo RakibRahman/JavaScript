@@ -75,6 +75,13 @@ const info = {
 //By using the spread operator
 const { fname, age, ...others } = info;
 
-console.log(`Name is ${name}`); //Output -> Name is Skay
-console.log(`Age is ${age}`); //Output -> Age is 38
+console.log(`Name is ${fname}`); //Output -> Name is Rakib
+console.log(`Age is ${age}`); //Output -> Age is 25
 console.log(others);
+
+console.log("---------------------");
+
+//! Add one element at the beginning of an array and one element at the end of an array.
+const rolls = [3, 5, 6, 9];
+const newRolls = [9, ...rolls, 49];
+console.log(`Add 9 at beginning of array and 49 at end of array: ${newRolls}`);
