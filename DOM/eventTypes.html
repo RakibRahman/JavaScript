@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Types</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+      div {
+        width: 200px;
+        height: 100px;
+        background-color: yellowgreen;
+        text-align: center;
+        line-height: 100px;
+      }
+
+      div:nth-child(2) {
+        background-color: coral;
+      }
+      div:nth-child(3) {
+        background-color: burlywood;
+      }
+      div:nth-child(4) {
+        background-color: cadetblue;
+      }
+      a {
+        color: whitesmoke;
+        font-size: 20px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <a href="#" onclick="alert('Kill me heal me')">Inline Alert</a>
+    </div>
+    <div>
+      <a href="#" onclick="callMe()">Calling a function</a>
+    </div>
+    <div>
+      <a id="eventCaller" href="#""
+        >Inline Event</a
+      >
+    </div>
+    <div>
+      <a class="alink" href="#" 
+        >addEventListener</a
+      >
+    </div>
+
+    <script>
+      //calling via function
+      const callMe = () => {
+        alert("One missed call");
+      };
+
+      // inline event
+      const call3 = document.querySelector("#eventCaller");
+      call3.onclick = function () {
+        alert("Fly High and Sky High");
+      };
+
+      //addEventListener
+      const listener = document.querySelector(".alink");
+
+      const callMe2 = () => {
+        alert("The Joker");
+      };
+
+      listener.addEventListener("click", callMe2);
+    </script>
+  </body>
+</html>
