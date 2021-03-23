@@ -1,0 +1,31 @@
+body {
+  background: darkslateblue;
+  color: whitesmoke;
+  display: grid;
+  place-items: center;
+}
+.box {
+  margin: 150px 0 10px;
+  width: 200px;
+  height: 200px;
+  background: #f14e0d;
+  text-align: center;
+}
+.actions {
+  display: flex;
+  gap: 4px;
+}
+button {
+  cursor: pointer;
+  padding: 2px 10px;
+  border: none;
+}
+
+.btnO {
+  color: aliceblue;
+  background-color: coral;
+}
+.btnE {
+  color: aliceblue;
+  background-color: lightcoral;
+}
