@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Event</title>
+  </head>
+  <body>
+    <h1>Keyboard Event</h1>
+    <p>Events that occurs when the user presses a key on the keyboard</p>
+    <ul>
+      <li><strong>onkeydown</strong> The event occurs when the user is pressing a key</l>
+      <li><strong>onkeypress</strong> The event occurs when the user presses a key</l>
+      <li><strong>onkeyup</strong> The event occurs when the user releases a key</l>
+    </ul>
+    <input
+      type="text"
+      onkeypress="keyPress()"
+      onkeyup="keyUp()"
+      onkeydown="keyDown()"
+    />
+    <p id="keys"></p>
+    <p id="keys2"></p>
+    <script>
+      const keys = document.getElementById("keys");
+      const keys2 = document.getElementById("keys2");
+      const keyPress = () => {
+        keys.innerHTML = `you have pressed ${event.key} & its code: ${event.code}`;
+      };
+      const keyUp = () => {
+        keys2.innerHTML = `Key is Up`;
+      };
+      const keyDown = () => {
+        keys2.innerHTML = `Key is Down`;
+      };
+    </script>
+  </body>
+</html>
