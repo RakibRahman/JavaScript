@@ -1,5 +1,6 @@
-let x = 20;
+//! do statement executes before reading the while clause.
 
+let x = 20;
 do {
   console.log(x);
 
