@@ -50,3 +50,12 @@ const id = "1612020049";
 const lastDigits = id.slice(-4);
 const masked = lastDigits.padStart(id.length, "*");
 console.log(masked);
+
+const maskEmail = (email, stars) => {
+  const hideLetter = email.slice(stars);
+  const obsecure = hideLetter.padStart(email.length, "*");
+  return obsecure;
+};
+console.log(maskEmail("ashTalukder@gmail.com", 4));
+console.log(maskEmail("ashTalukder@gmail.com", 2));
+console.log(maskEmail("ashTalukder@gmail.com", 0));
