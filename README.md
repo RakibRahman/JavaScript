@@ -86,11 +86,11 @@
 
 ### Day-43:DOM,Events,Switch
 
-### Day-44:
+### Day-44:Array Methods,For Loop,If Else,Events
 
-### Day-45:
+### Day-45: DOM
 
-### Day-47:
+### Day-47: DOM,Promises
 
 ### Day-48:
 
