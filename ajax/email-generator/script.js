@@ -14,12 +14,17 @@ const getInput = () => {
       //   console.log(data);
 
       output.innerHTML = "";
+
       //? iterate over data
 
-      for (let i = 0; i < data.length; i++) {
-        output.innerHTML +=
-          data[i].name.first + ": " + data[i].email + " " + "</br>";
-      }
+      data.forEach((user) => {
+        const { name, email } = user;
+        output.innerHTML += `${name.first} :  ${email} </br>`;
+      });
+      // for (let i = 0; i < data.length; i++) {
+      //   output.innerHTML +=
+      //     data[i].name.first + ": " + data[i].email + " " + "</br>";
+      // }
     } else {
       console.log("an error occurred");
     }
