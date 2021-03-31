@@ -17,9 +17,13 @@ const fetchUser = () => {
       const user = data.results;
       console.log(data);
       output.innerText = "";
-      user.forEach((item) => {
-        output.innerHTML += "<img src='" + item.picture.large + "'" + "</br>";
-      });
+      user
+        .forEach((item) => {
+          output.innerHTML += "<img src='" + item.picture.large + "'" + "</br>";
+        })
+        .catch((error) => {
+          console.log("an error occurred", error);
+        });
     });
 };
 btn.addEventListener("click", fetchUser);
