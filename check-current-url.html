@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sample</title>
+  </head>
+  <body>
+    <button onClick="alertCurrentURL()">Show current URL</button>
+    <p id="url"></p>
+    <script>
+      function alertCurrentURL() {
+        document.getElementById(
+          "url"
+        ).innerHTML = `Current URL: ${window.location.href}`;
+      }
+    </script>
+  </body>
+</html>
