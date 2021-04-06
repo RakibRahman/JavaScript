@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Await</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      div {
+        width: 400px;
+        margin: 120px auto;
+        text-align: center;
+      }
+      div ul {
+        list-style: none;
+        margin: 20px 0;
+      }
+      p {
+        font-size: 20px;
+      }
+      button {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="info">Confirm your order</p>
+      <ul>
+        <li>Games - 10$</li>
+        <li>Snacks - 80$</li>
+        <li>Total - 90$</li>
+      </ul>
+      <form action="">
+        <button onclick="submitForm()">Submit</button>
+      </form>
+    </div>
+    <script src="vendor.js"></script>
+
+    <script>
+      const info = document.querySelector("#info");
+      window.submitForm = async function () {
+        event.preventDefault();
+        console.log("Submitting info to the vendors");
+
+        let orderResponse = null;
+
+        const creditResponse = await creditValidAPI.makeAPIRequest();
+        console.log(creditResponse);
+        try {
+          orderResponse = await placeOrderAPI.makeAPIRequest();
+          console.log(orderResponse);
+        } catch (error) {
+          info.innerHTML = "order is not placed";
+        }
+
+        const supplierResponse = await contactSupplierAPI.makeAPIRequest();
+        console.log(supplierResponse);
+        if (supplierResponse.contacted) {
+          info.innerHTML = "order placed!";
+          document.querySelector("button").innerText = "Submitted";
+        }
+      };
+    </script>
+  </body>
+</html>
