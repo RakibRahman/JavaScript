@@ -3,8 +3,15 @@ var myFunction = function () {
   console.log(this);
 };
 
-// call it
-// myFunction();
+myFunction();
+
+var myFunction2 = function () {
+  // "use strict";
+  this.user = "rakib";
+};
+
+myFunction2();
+console.log(user);
 
 var person = {
   firstName: "Harry",
