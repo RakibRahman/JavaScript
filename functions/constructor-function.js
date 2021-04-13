@@ -52,3 +52,11 @@ personThree.getAge = function () {
   return `Age: ${this.age}`;
 };
 console.log(personThree.getAge());
+
+console.log("---------------------");
+
+function Cat(name) {
+  this.name = name;
+}
+const myCat = new Cat("Rob"); // {name: Rob}
+console.log(myCat.name); //Rob
