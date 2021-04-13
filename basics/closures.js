@@ -16,3 +16,18 @@ function total(a) {
   };
 }
 total(2)(2);
+
+//! ex3
+function deepFn() {
+  var b = 900;
+  function outer() {
+    var x = 25;
+
+    function inner() {
+      console.log(x, b);
+    }
+    inner();
+  }
+  outer();
+}
+deepFn();
