@@ -37,4 +37,13 @@ console.log(createCandy({}));
 console.log(createCandy({ scoops: 2 }));
 console.log(createCandy({ scoops: 6, toppings: ["Cherry", "Cookie"] }));
 
+console.log("---------------------");
+
+function buildHouse({ floors = 1, color = "red", walls = "brick" } = {}) {
+  return `Your house has ${floors} floor(s) with ${color} ${walls} walls.`;
+}
+buildHouse();
+console.log(buildHouse());
+console.log(buildHouse({}));
+console.log(buildHouse({ floors: 3, color: "yellow" }));
 //! object defaults with object destructuring is recommended
