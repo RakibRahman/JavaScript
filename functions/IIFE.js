@@ -11,11 +11,19 @@ test();
   console.log("What is IIFE Again?");
 })(); // last brackets are to pass argument
 
+(function (name) {
+  console.log(`Hi There, ${name}`);
+})("rakib");
+console.log("---------------------");
+
 const sum = (function sum() {
   return 10 * 10;
 })();
 console.log(sum);
 
+(function (x, y) {
+  console.log(x * y);
+})(2, 3);
 console.log("---------------------");
 
 const user = (function () {
@@ -29,3 +37,11 @@ const info = (function () {
   return `Hello ${user.name}`;
 })();
 console.log(info);
+
+const myFunction = (function () {
+  const hi = "Hi!";
+  return function () {
+    console.log(hi);
+  };
+})();
+myFunction();
