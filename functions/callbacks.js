@@ -21,3 +21,17 @@ const outer = (callbackFn) => {
 outer(function inner() {
   console.log("Inner Callback Function");
 });
+
+console.log("---------------------");
+
+function each(array, callback) {
+  for (let i = 0; i < array.length; i++) {
+    if (callback(array[i])) {
+      console.log(array[i]);
+    }
+  }
+}
+function isPositive(n) {
+  return n > 0;
+}
+each([-2, 7, 11, -4, -10], isPositive);
