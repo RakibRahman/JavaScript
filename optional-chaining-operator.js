@@ -1,3 +1,6 @@
+//! Optional chaining is a process for querying and calling properties, methods on an optional that might currently be null or undefined.
+//?  Optional Chaining is an approach to simplify JavaScript expressions for accessing deeply nested values, array items and methods when there is a possibility that a reference may be missing.
+
 const pet = {
   name: "badsha",
   cat: {
@@ -14,3 +17,20 @@ myMap.set("foo", { name: "baz", desc: "inga" });
 
 let nameBar = myMap.get("foo")?.desc;
 console.log(nameBar);
+
+console.log("---------------------");
+
+const user = {
+  firstName: "Rakin",
+  lastName: "Amin",
+  address: {
+    city: "Habiganj",
+    street: "post office",
+    /* house: {
+      number: "5",
+    },
+    */
+  },
+};
+// console.log(user.address.house.number); //! type error
+console.log(user?.address?.house?.number); //? undefined
