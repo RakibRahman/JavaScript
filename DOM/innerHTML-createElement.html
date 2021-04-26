@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerHTML versus createElement</title>
+    <style>
+      body {
+        background-color: gray;
+      }
+      label {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JS DOM</h1>
+    <section id="output"></section>
+    <script>
+      const output = document.getElementById("output");
+
+      //using createElement
+      function createInputElement({ label, type = "text" }) {
+        const labelEl = document.createElement("label");
+        const inputEl = document.createElement("input");
+        inputEl.type = type;
+        labelEl.innerText = label;
+        labelEl.append(inputEl);
+        return labelEl;
+      }
+      const inputText = createInputElement({ label: "name:" });
+      const inputPassword = createInputElement({
+        label: "password:",
+        type: "password",
+      });
+      console.log(inputText);
+      output.append(inputText);
+      output.innerHTML += `<br /> <br />`;
+      output.append(inputPassword);
+
+      console.log("---------------------");
+      //using string templates/innerHTML
+      function createInputElementTemplate({ label, type = "color" }) {
+        return `
+
+        <br/>
+        <br/>
+        <label>
+          ${label}
+        <input type="${type}">
+        </label>
+
+
+        `;
+      }
+
+      const inputCheckbox = createInputElementTemplate({
+        label: "remember me",
+        type: "checkbox",
+      });
+      output.innerHTML += inputCheckbox;
+    </script>
+  </body>
+</html>
