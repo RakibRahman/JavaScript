@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Replacing DOM Elements</title>
+  </head>
+  <body style="text-align: center">
+    <h1>JavaScript DOM</h1>
+    <section id="output"></section>
+    <script>
+      const output = document.getElementById("output");
+
+      output.innerHTML = `
+      <div>
+text will be replaced
+        </div>
+
+      `;
+      const div = output.querySelector("div");
+      const newDiv = document.createElement("div");
+      newDiv.innerText = "kill me heal me";
+      // div.replaceWith(newDiv);
+      setTimeout(() => {
+        div.replaceWith(newDiv);
+      }, 2000);
+    </script>
+  </body>
+</html>
