@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating DOM Nodes</title>
+  </head>
+  <body>
+    <header>
+      <h1>JS DOM</h1>
+    </header>
+    <section id="output"></div>
+    <script>
+      const output = document.getElementById("output");
+      const div =  document.createElement("div");
+      const text = document.createTextNode("append the div");
+      const comment = document.createComment("comment is required")
+      div.append(text,comment);
+      output.append(div);
+      
+    </script>
+  </body>
+</html>
