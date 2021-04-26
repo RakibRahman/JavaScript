@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insertAdjacentHTML</title>
+  </head>
+  <body style="text-align: center">
+    <h1>JavaScript DOM</h1>
+    <section id="output"></section>
+    <script>
+      const output = document.getElementById("output");
+
+      output.innerHTML = `
+      <div>
+        <h1>Pain</h1>
+        <p>This World  Shall Know Pain</p>
+        <ul>
+          <li>Nagato</li>
+          </ul>
+        </div>
+
+      `;
+      const ul = output.querySelector("ul");
+      ul.insertAdjacentHTML("beforebegin", "<p>Shinra Tensei</p>");
+      ul.insertAdjacentHTML("afterbegin", "<li>konan</li> ");
+      ul.insertAdjacentHTML("beforeend", "<li>yahiko</li> ");
+      ul.insertAdjacentHTML("afterend", "<p>Akatsuki</p> ");
+    </script>
+  </body>
+</html>
