@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserting DOM Elements</title>
+  </head>
+  <body style="text-align: center">
+    <h1>JavaScript DOM</h1>
+    <section id="output"></section>
+    <script>
+      const output = document.getElementById("output");
+
+      const div = document.createElement("div");
+      const span = document.createElement("span");
+      const p = document.createElement("p");
+      const h3 = document.createElement("h3");
+      const h4 = document.createElement("h4");
+
+      div.append(span); //as last element
+      div.prepend(p); // as first element
+      p.before(h3);
+      span.after(h4);
+      console.log(div);
+    </script>
+  </body>
+</html>
