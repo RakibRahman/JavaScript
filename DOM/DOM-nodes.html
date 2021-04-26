@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Nodes</title>
+  </head>
+  <body>
+    <header>
+      <h1>JS DOM</h1>
+    </header>
+    <div id="output"></div>
+    <script>
+      const output = document.getElementById("output");
+      output.innerHTML = `<h1>keep coding</h1>`;
+
+      //html
+      console.log(document.documentElement);
+      console.dir(document.documentElement);
+      console.log("---");
+      //head
+      console.dir(document.head);
+      console.log("---");
+
+      //body
+      console.log(document.body);
+      console.dir(document.body);
+      console.log("---");
+
+      //retrieve the constructor name
+      console.log(document.body.constructor.name);
+
+      //looking at he prototype chain
+      console.log(document.body instanceof HTMLBodyElement);
+      console.log(document.body instanceof HTMLElement);
+      console.log(document.body instanceof Element);
+      console.log(document.body instanceof Node);
+      console.log(document.body instanceof EventTarget);
+
+      console.log("---------------------");
+      console.log(document.body.nodeType);
+      console.log(document.nodeType);
+      console.log("---------------------");
+      console.log(document.body.tagName);
+      console.log(document.body.nodeName);
+      console.log(document.nodeName);
+      console.log(document.tagName);
+      //there are 12 types of nodeType
+    </script>
+  </body>
+</html>
