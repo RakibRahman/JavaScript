@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DocumentFragments</title>
+  </head>
+  <body>
+    <h1>JS DOM</h1>
+    <section id="output"></section>
+    <script>
+      const output = document.getElementById("output");
+
+      const data = ["watch", "pants", "shirt", "shoe"];
+
+      const fragment = document.createDocumentFragment();
+
+      data.forEach(function (item) {
+        const li = document.createElement("li");
+        li.innerText = item;
+        fragment.append(li);
+      });
+      output.append(fragment);
+    </script>
+  </body>
+</html>
