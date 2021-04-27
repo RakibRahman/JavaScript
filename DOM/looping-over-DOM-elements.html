@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Looping over DOM Elements</title>
+  </head>
+  <body>
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById("output");
+
+      output.innerHTML = `
+      <h1>Hello DOM!</h1>
+
+      <ul id="list">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+      `;
+      const listItems = document.querySelectorAll("#list li");
+      //By using for loop
+      for (let i = 0; i < listItems.length; i++) {
+        // console.log(listItems[i]);
+        console.log(listItems[i].innerText);
+      }
+      console.log("---------");
+
+      //using for of loop
+      for (const item of listItems) {
+        console.log(item);
+      }
+      console.log("---------");
+      //using destructuring+forEach loop
+      [...listItems].forEach((item) => console.log(item));
+      console.log("---------");
+      //using Array.from+ForEach loop
+      Array.from(listItems).forEach((item) => console.log(item.textContent));
+    </script>
+  </body>
+</html>
