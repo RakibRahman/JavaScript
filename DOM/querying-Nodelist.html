@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Querying DOM - Nodelists</title>
+  </head>
+  <body>
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById("output");
+
+      output.innerHTML = `
+      <h1>Hello DOM!</h1>
+
+      <ul id="list">
+        
+        </ul>
+
+      `;
+      const arrays = ["zakirMiya", "ohirMiya", "ashMiya", "dong"];
+      const fragment = document.createDocumentFragment();
+
+      arrays.forEach((item) => {
+        const li = document.createElement("li");
+        li.className = "list-item";
+        li.innerText = item;
+        fragment.append(li);
+      });
+      const list = document.querySelector("#list");
+      list.append(fragment);
+
+      console.log(list);
+
+      const listItems = list.querySelectorAll(".list-item");
+      console.log(listItems);
+    </script>
+  </body>
+</html>
