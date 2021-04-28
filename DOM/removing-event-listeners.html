@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Removing Event Listeners</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+      const output = document.getElementById("output");
+
+      output.innerHTML = `  
+      <h1 id="title">Removing Event Listeners</h1>
+
+      <button type="button" id="btn" class="btn remove buy">Click me once</button>
+      <button type="button" id="btn2" class="btn remove buy">Double Click me</button>
+    
+      `;
+      const btn = document.querySelector("#btn");
+      const btn2 = document.querySelector("#btn2");
+
+      function handleClick(event) {
+        console.log("btn is clicked");
+        document.getElementById("title").innerText =
+          "button will not work soon";
+
+        setTimeout(() => {
+          //disable click after few seconds
+          btn.removeEventListener("click", handleClick);
+          document.getElementById("title").innerText = "Event removed";
+        }, 3000);
+      }
+      btn.addEventListener("click", handleClick);
+
+      //   setTimeout(() => {
+      //     btn.removeEventListener("click", handleClick);
+      //     document.getElementById("title").innerText = "Event removed";
+      //   }, 3000);
+
+      btn2.addEventListener(
+        "dblclick",
+        (event) => {
+          console.log("double clicked");
+          btn2.innerText = "disabled";
+        },
+        { once: true }
+      );
+    </script>
+  </body>
+</html>
