@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set and Get Inline Styles</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+      const output = document.getElementById("output");
+
+      output.innerHTML = `
+      <h1>Set and Get Inline Styles</h1>
+      <button type="button" id="btn">Click me</button>
+      <button type="button" id="btn2">Click me</button>
+      `;
+      const btn = document.getElementById("btn");
+      const btn2 = document.getElementById("btn2");
+      console.dir(btn.style);
+
+      //cssText
+      btn.style.cssText =
+        "padding: 5px 10px; margin: 5px; color:red; font-size:18px";
+
+      //direct property access
+      btn2.style.backgroundColor = "red";
+      btn2.style.border = "none";
+      console.log(btn.style.fontSize); //get value
+    </script>
+  </body>
+</html>
