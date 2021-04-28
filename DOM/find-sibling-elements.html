@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding Sibling Elements</title>
+  </head>
+  <body>
+    <input type="checkbox" name="" id="" />
+
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById("output");
+
+      output.innerHTML = `
+      <h1>Hello DOM!</h1>
+
+      <ul id="list">
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>Four</li>
+        </ul>
+      `;
+      const list = document.querySelector("#list");
+
+      const listItem = list.querySelector("li");
+      console.log(listItem);
+      console.log(listItem.nextSibling); //any DOM Nodes
+      console.log(listItem.previousSibling);
+
+      console.log(listItem.nextElementSibling); //any Element nodes
+      console.log(listItem.previousElementSibling);
+    </script>
+  </body>
+</html>
