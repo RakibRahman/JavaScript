@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting and Getting Classes</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+      const output = document.getElementById("output");
+
+      output.innerHTML = `
+      <h1>Set and Get Inline Styles</h1>
+      <button type="button" class="btn btn-active">Click me</button>
+      <button type="button" id="btn" class="btn remove buy">Click me</button>
+    
+      `;
+      const btn = document.querySelector("button");
+      const btn2 = document.querySelector("#btn");
+      console.dir(btn);
+
+      //add class using className
+      btn.className = "btn-click"; //eradicates previous classes
+      btn.className += " btn-click";
+
+      console.log(btn.className);
+
+      console.log("---------------------");
+
+      //using classList
+      btn2.classList.add("btn2");
+      // btn2.classList.remove("remove");
+      btn2.classList.toggle("active");
+
+      setTimeout(() => btn2.classList.toggle("remove"), 2000);
+
+      btn2.classList.replace("buy", "sell");
+      console.log(btn2.classList);
+    </script>
+  </body>
+</html>
