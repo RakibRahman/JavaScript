@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling, Capturing and Propagation</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+      const output = document.getElementById("output");
+
+      output.innerHTML = `
+      <h1 id="title"> Event Bubbling, Capturing and Propagation</h1>
+        <div class="one">
+            
+            <div class="two">
+                <p>dddd</p>
+                <button type="button" id="btn" class="three">Click me plz</button>
+            </div>
+            </div>
+
+
+      `;
+      const one = document.querySelector(".one");
+      const two = document.querySelector(".two");
+      const three = document.querySelector("#btn");
+
+      function handleClick(e) {
+        //stop event bubbling (bottom to top)
+        e.stopPropagation();
+
+        e.stopImmediatePropagation();
+        console.log(e.target);
+      }
+      one.addEventListener("click", handleClick);
+      two.addEventListener("click", handleClick);
+      three.addEventListener("click", handleClick);
+
+      three.addEventListener("click", () => {
+        console.log("twice");
+      });
+    </script>
+  </body>
+</html>
