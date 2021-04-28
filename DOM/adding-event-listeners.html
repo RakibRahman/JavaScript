@@ -29,6 +29,12 @@
         console.log(this);
       }
       btn.addEventListener("click", handleClick);
+
+      btn.addEventListener("dblclick", (event) => {
+        console.log("Double Clicked");
+        console.log(event.target);
+        console.log(this);
+      });
     </script>
   </body>
 </html>
