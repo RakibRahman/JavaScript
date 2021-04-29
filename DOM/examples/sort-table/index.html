@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 4px;
+      }
+      th {
+        cursor: pointer;
+        color: seagreen;
+      }
+      th:hover {
+        /* background: yellow; */
+      }
+      .bg {
+        background-color: black;
+      }
+      td {
+        background-color: sandybrown;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="number" name="" id="inputAge" placeholder="age" />
+    <input type="text" name="" id="inputName" placeholder="name" />
+    <button id="btn">Add Data</button>
+    <table id="grid">
+      <thead>
+        <tr>
+          <th data-type="number">Age</th>
+          <th data-type="string">Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>5</td>
+          <td>John</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Pete</td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>Ann</td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>Eugene</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Ilya</td>
+        </tr>
+      </tbody>
+    </table>
+    <script src="app.js"></script>
+  </body>
+</html>
