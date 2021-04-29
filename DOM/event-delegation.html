@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Delegation</title>
+  </head>
+  <body>
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById("output");
+      output.innerHTML = `
+
+            <h1>JS DOM</h1>
+        <button type="button" id="btn">Add More</button>
+        <ul id="list">
+
+            <li>Who Are you?</li>
+            <li>Shinra Tensei</li>
+            <li>WOw</li>
+            <li>Nicee</li>
+
+            </ul>
+      `;
+      const list = document.querySelector("#list");
+      const items = [...list.querySelectorAll("li")]; //convert nodelist to array
+      const btn = document.querySelector("#btn");
+      function handleClick(e) {
+        console.log(e.target.nodeName);
+
+        if (e.target.nodeName.toLowerCase() === "li") {
+          console.log(e.target.innerText);
+        }
+        // e.target.style.display = "none";
+      }
+      //   items.forEach((item) => {
+      //     item.addEventListener("click", handleClick);
+      //   });
+      list.addEventListener("click", handleClick);
+
+      btn.addEventListener("click", () => {
+        const items = list.querySelectorAll("li");
+        const li = document.createElement("li");
+        li.innerText = `item ${items.length + 1}`;
+        list.append(li);
+      });
+    </script>
+  </body>
+</html>
