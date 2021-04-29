@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyboard Events</title>
+  </head>
+  <body>
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById("output");
+      output.innerHTML = `
+      <h1>Keyboard Events</h1>
+        <p>Press g for green</p>
+        <p>Press o for orange</p>
+        <p>Press 1 for red</p>
+        <p>Press x to delete</p>
+        `;
+      document.addEventListener("keyup", (e) => {
+        console.log(e.key);
+        console.log(e.code);
+
+        switch (e.key) {
+          case "1": {
+            output.style.cssText = "color:red";
+            break;
+          }
+
+          case "x": {
+            output.style.cssText = "display:none";
+            break;
+          }
+
+          case "o": {
+            output.style.cssText = "color:orange";
+            break;
+          }
+
+          case "g": {
+            output.style.cssText = "color:green";
+            break;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
