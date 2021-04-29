@@ -14,23 +14,21 @@ function compareData(colNum, type) {
   let rowArray = Array.from(tbody.rows);
   console.log(rowArray);
 
-  let compare;
-  //! compare(a, b) compares two rows, need for sorting
   switch (type) {
     case "number":
-      compare = function (a, b) {
-        return a.cells[colNum].innerHTML - b.cells[colNum].innerHTML;
-        console.log("www");
-      };
+      rowArray.sort(
+        (a, b) => a.cells[colNum].innerHTML - b.cells[colNum].innerHTML
+      );
       break;
+
     case "string":
-      compare = function (a, b) {
-        return a.cells[colNum].innerHTML - b.cells[colNum].innerHTML ? 1 : -1;
-      };
+      rowArray.sort((a, b) =>
+        a.cells[colNum].innerHTML - b.cells[colNum].innerHTML ? 1 : -1
+      );
+
       break;
   }
-  //? sort
-  rowArray.sort(compare);
+
   tbody.append(...rowArray);
 }
 table.addEventListener("click", sortData);
