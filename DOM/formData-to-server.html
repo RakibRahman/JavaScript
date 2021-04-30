@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transforming FormData</title>
+    <style>
+      #output input {
+        margin: 5px;
+      }
+      .radio {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="output"></div>
+
+    <script>
+      const output = document.getElementById("output");
+      output.innerHTML = `
+                <h1> Transforming FormData for the server
+
+          </h1>
+                      </br>
+                      <form name='order'>
+                          <label>
+                              Name: <input name="fullname" type="text" value="rakib">
+                              </label>
+
+                          </br>
+                          <label>
+                             Email: <input name="email" type="email" >
+                              </label>
+                          <label>
+                          </br>
+                          <label>
+                             ID:<input name="id" type="number" >
+                              </label>
+                          <label>
+
+
+                          </br>
+                          <label>
+                              Select Dept:
+                              <select name="dept">
+                                  <option value="CSE">CSE</option>
+                                  <option value="EEE">EEE</option>
+                                  <option value="BBA">BBA</option>
+
+                                  </select>
+                              </label>
+                          </br>
+
+                          <div class="radio">
+        <label>
+          <input
+            type="radio"
+            name="year"
+            id=""
+            value="first"
+            checked="checked"
+          />
+          first year</label
+        >
+        <label>
+          <input
+            type="radio"
+            name="year"
+            id=""
+            value="second"
+
+          />
+          second year</label
+        >
+        <label>
+          <input
+            type="radio"
+            name="year"
+            id=""
+            value="third"
+
+          />
+          third year</label
+        >
+        <label>
+          <input
+            type="radio"
+            name="year"
+            id=""
+            value="fourth"
+
+          />
+          fourth year</label
+        >
+      </div>
+                     <label>
+                            <input name="submit" type="submit">
+               </label>
+
+
+                          </form>
+                  `;
+
+      const form = document.forms.order;
+
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        //query string approach
+
+        //content type = application/x-www-form-urlencoded
+        //fullname=Rakib+Rahman&email=md.rr.talukder@gmail.com&id=111
+
+        //Method 1
+        const formData = new FormData(event.target);
+        const data = [...formData.entries()];
+        // console.log(data);
+
+        // const dataAsString = data.map((x) => `${x[0]}=${x[1]}`);
+        // const dataAsString = data
+        //   .map((x) => `${encodeURIComponent(x[0])}=${encodeURIComponent(x[1])}`)
+        //   .join("&");
+        // encodeURIComponent to remove spaces.
+
+        //Method 2
+        const dataAsString = new URLSearchParams(formData).toString();
+        console.log(dataAsString);
+
+        //JSON
+        const dataAsJSON = JSON.stringify(Object.fromEntries(formData));
+        // => pass 'formdata' to Object.fromEntries() then use JSON.stringify() to get the value
+        console.log(dataAsJSON);
+      }
+
+      form.addEventListener("submit", handleSubmit);
+    </script>
+  </body>
+</html>
