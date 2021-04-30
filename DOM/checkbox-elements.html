@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Handling Radio Input Elements</title>
+    <title>Handling Checkbox Input Elements</title>
     <style>
       h1 {
         color: white;
@@ -14,19 +14,19 @@
   </head>
   <body>
     <div id="output">
-      <h1>Handling Radio Input Elements</h1>
+      <h1>Handling Checkbox Input Elements</h1>
       <form name="formDemo">
-        <div id="radioArea">
+        <div id="checkArea">
           <label>
-            <input type="radio" name="color" value="red" />
+            <input type="checkbox" name="color" value="red" />
             Red
           </label>
           <label>
-            <input type="radio" name="color" value="green" />
+            <input type="checkbox" name="color" value="green" />
             Green
           </label>
           <label>
-            <input type="radio" name="color" value="blue" checked />
+            <input type="checkbox" name="color" value="blue" checked />
             Blue
           </label>
         </div>
@@ -36,31 +36,18 @@
       const output = document.getElementById("output");
 
       const form = document.forms.formDemo;
-      const radios = [...form.elements.color];
-      console.log(radios);
+      const checks = [...form.elements.color];
+      console.log(checks);
 
-      radios.forEach((radio) =>
-        console.log(`${radio.value} - ${radio.checked}`)
-      );
+      // checks[1].checked = true;
 
       //Event
-      const radioArea = document.getElementById("radioArea");
-
-      radioArea.addEventListener("change", () => {
-        // const checked = radios.find((item) => item.checked);
-        // console.log(checked.value);
-        // if (checked.value === "blue") {
-        //   output.style.background = "blue";
-        // } else if (checked.value === "green") {
-        //   output.style.background = "green";
-        // } else if (checked.value === "red") {
-        //   output.style.background = "red";
-        // }
-        console.log(form.elements.color.value);
+      const checkArea = document.getElementById("checkArea");
+      checkArea.addEventListener("change", () => {
+        checks.find((radio) =>
+          console.log(`${radio.value} - ${radio.checked}`)
+        );
       });
-
-      radios[2].select();
-      radios[1].checked = true;
     </script>
   </body>
 </html>
