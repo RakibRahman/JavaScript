@@ -5,11 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Handling Radio Input Elements</title>
+    <style>
+      h1 {
+        color: white;
+        padding: 15px 10px;
+      }
+    </style>
   </head>
   <body>
-    <div id="output"></div>
+    <div id="output">
+      <h1>Handling Radio Input Elements</h1>
+      <form name="formDemo">
+        <div id="radioArea">
+          <label>
+            <input type="radio" name="color" value="red" />
+            Red
+          </label>
+          <label>
+            <input type="radio" name="color" value="green" />
+            Green
+          </label>
+          <label>
+            <input type="radio" name="color" value="blue" checked />
+            Blue
+          </label>
+        </div>
+      </form>
+    </div>
     <script>
       const output = document.getElementById("output");
+
+      const form = document.forms.formDemo;
+      const radios = [...form.elements.color];
+      console.log(radios);
+
+      radios.forEach((radio) =>
+        console.log(`${radio.value} - ${radio.checked}`)
+      );
+
+      //Event
+      const radioArea = document.getElementById("radioArea");
+
+      radioArea.addEventListener("change", () => {
+        // const checked = radios.find((item) => item.checked);
+        // console.log(checked.value);
+        // if (checked.value === "blue") {
+        //   output.style.background = "blue";
+        // } else if (checked.value === "green") {
+        //   output.style.background = "green";
+        // } else if (checked.value === "red") {
+        //   output.style.background = "red";
+        // }
+        console.log(form.elements.color.value);
+      });
+
+      radios[2].select();
+      radios[1].checked = true;
     </script>
   </body>
 </html>
