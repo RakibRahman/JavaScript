@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Element</title>
+  </head>
+  <body>
+    <div id="output"></div>
+    <script>
+      const output = document.getElementById("output");
+      output.innerHTML = `
+        <h1>Handling Input Element</h1>
+        <form name="demoForm">
+        <input type="text" name="userName" value="John" />
+            </form>
+      `;
+      const form = document.forms.demoForm;
+      const input = form.elements.userName;
+      console.log(input);
+      input.value = "rakib";
+      //   input.disabled = true;
+      //   input.readOnly = true;
+      console.log(input.value);
+
+      //Events
+      input.addEventListener("focus", () => {
+        console.log(focus);
+        // input.setAttribute("placeholder", "d");
+        console.log("focused");
+        document.body.style.backgroundColor = "springgreen";
+        output.querySelector("h1").innerText = "in focus";
+      });
+      input.addEventListener("blur", () => {
+        console.log(blur);
+
+        console.log("blur");
+        document.body.style.backgroundColor = "limegreen";
+        output.querySelector("h1").innerText = "out of focus";
+      });
+      input.addEventListener("input", () => {
+        console.log(input);
+        console.log("data input");
+        document.body.style.backgroundColor = "green";
+        output.querySelector("h1").innerText = input.value;
+      });
+      input.addEventListener("change", () => {
+        console.log("data change");
+      });
+
+      //auto focus
+      input.focus();
+
+      setTimeout(() => input.blur(), 3000);
+    </script>
+  </body>
+</html>
