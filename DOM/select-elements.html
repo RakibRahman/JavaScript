@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handling Select Elements</title>
+  </head>
+  <body>
+    <h1>Handling Select Elements</h1>
+
+    <form name="formDemo">
+      <select name="language">
+        <option value="">Select Language</option>
+        <option value="english">English</option>
+        <option value="bangla" selected>Bangla</option>
+        <option value="japanese">Japanese</option>
+      </select>
+      <p id="output"></p>
+    </form>
+    <script>
+      const form = document.forms.formDemo;
+      const menu = form.elements.language;
+      console.log(menu);
+      const output = document.getElementById("output");
+      menu.addEventListener("change", () => {
+        //selected value
+        output.innerText = `you  selected ${menu.value}`;
+        console.log(menu.options[menu.selectedIndex]);
+      });
+      //selected index
+      const id = 3;
+      console.log((menu.selectedIndex = id));
+
+      //selected DOM Elements
+      console.log(menu.options[menu.selectedIndex]);
+      console.log(menu.options[menu.selectedIndex].value);
+      console.log(menu.options[menu.selectedIndex].text);
+
+      //add new option
+      const option = document.createElement("option");
+      option.value = "korean";
+      option.text = "Korean";
+      menu.add(option, 1);
+    </script>
+  </body>
+</html>
