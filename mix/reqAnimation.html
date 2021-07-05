@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation With requestAnimation</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    div {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: red;
+      transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+  </style>
+  <body>
+    <div id="circle"></div>
+    <script>
+      const circle = document.getElementById("circle");
+      let x = 0;
+      let limit = 200;
+      let rafId = 0;
+      const move = (_) => {
+        x += 1;
+        circle.style.transform = `translateX(${x}px)`;
+
+        if (x === limit) {
+          cancelAnimationFrame(rafId);
+          circle.style.background = "red";
+        } else {
+          rafId = requestAnimationFrame(move);
+        }
+        if (x == 100) {
+          circle.style.background = "green";
+        }
+      };
+      window.requestAnimationFrame(move);
+    </script>
+  </body>
+</html>
